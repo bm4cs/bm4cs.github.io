@@ -239,10 +239,10 @@ function getForecastFromNetwork(coords) {
     },
   };
 
-  const commaAt = location.indexOf(',');
+  const commaAt = coords.indexOf(',');
   const result = Object.assign({}, fakeForecast);
-  result.latitude = parseFloat(location.substr(0, commaAt));
-  result.longitude = parseFloat(location.substr(commaAt + 1));
+  result.latitude = parseFloat(coords.substr(0, commaAt));
+  result.longitude = parseFloat(coords.substr(commaAt + 1));
   return result;
 
 
