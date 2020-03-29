@@ -157,7 +157,7 @@ function getForecastFromNetwork(coords) {
 
   return fetch(`/data/weather.json`)
       .then((response) => {
-        return response;
+        return response.text();
       })
       .catch(() => {
         return null;
